@@ -1,0 +1,40 @@
+/* Recursos opcionais da Apeperia Acolhedora */
+.central-autismo { padding: 3rem 1.5rem; color: #333; }
+.central-autismo__intro { max-width: 760px; margin: 0 auto 2rem; text-align: center; }
+.central-autismo__intro h2 { font-size: 2rem; margin: .8rem 0; }
+.central-autismo__intro p, .autismo-area p { line-height: 1.65; }
+.autismo-painel { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin:2rem 0; }
+.autismo-card, .autismo-area { background:#fff; border:1px solid #e1e5e8; border-radius:12px; padding:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.04); }
+.autismo-card h3, .autismo-area h3 { margin:.6rem 0; color:#333; }
+.autismo-card p { line-height:1.55; min-height:4.5em; }
+.autismo-area { margin:1.4rem 0; }
+.autismo-area__titulo { margin-bottom:1rem; }
+.rotina-adicionar label { display:block; font-weight:700; margin-bottom:.5rem; }
+.rotina-adicionar div { display:flex; flex-wrap:wrap; gap:.6rem; }
+.rotina-adicionar input { flex:1 1 220px; min-width:0; padding:.8rem; border:1px solid #9aa5ad; border-radius:6px; font:inherit; }
+.central-autismo button, .central-autismo .recurso-acao { cursor:pointer; font:inherit; }
+.central-autismo button:focus-visible, .central-autismo a:focus-visible, .central-autismo input:focus-visible { outline:3px solid #245b9e; outline-offset:3px; }
+.lista-rotina { list-style:none; padding:0; margin:1rem 0; }
+.lista-rotina li { border-bottom:1px solid #e5e8eb; padding:.8rem .2rem; }
+.lista-rotina label { display:flex; gap:.8rem; align-items:center; cursor:pointer; }
+.lista-rotina input { width:1.2rem; height:1.2rem; accent-color:#35745e; }
+.lista-rotina input:checked + span { text-decoration:line-through; opacity:.65; }
+.feedback-autismo { background:#f2f6f4; border-radius:6px; padding:.8rem; }
+.etapas-controle { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.8rem; }
+.etapas-controle button, .rotina-adicionar button, #limparRotina { padding:.7rem 1rem; border:1px solid #315f72; border-radius:6px; background:#315f72; color:white; }
+.etapas-controle button:disabled { opacity:.45; cursor:not-allowed; }
+.etapa-conteudo { margin-top:1rem; padding:1.2rem; background:#f3f6f8; border-radius:8px; min-height:130px; }
+.etapa-conteudo > span { color:#315f72; font-weight:700; letter-spacing:.08em; }
+.etapa-conteudo h4 { font-size:1.25rem; margin:.5rem 0; }
+.frases-comunicacao { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:.7rem; }
+.frases-comunicacao button { min-height:58px; padding:.8rem; text-align:left; border:1px solid #aab7bd; border-radius:8px; background:#f7f9fa; color:#25343a; }
+.frases-comunicacao button:hover { background:#eaf1f3; }
+body.modo-calmo { background:#f3f2e9; color:#343b36; }
+body.modo-calmo .central-autismo, body.modo-calmo .secaoSobre, body.modo-calmo .secaoDestaque { filter:saturate(.62); }
+body.modo-calmo .autismo-card, body.modo-calmo .autismo-area { background:#fbfaf4; box-shadow:none; }
+body.modo-calmo *, body.reduzir-movimento *, body.reduzir-movimento *::before, body.reduzir-movimento *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+body.alto-contraste .central-autismo .autismo-card, body.alto-contraste .central-autismo .autismo-area { background:#000; color:#fff; border:2px solid #fff; }
+body.alto-contraste .central-autismo h2, body.alto-contraste .central-autismo h3, body.alto-contraste .central-autismo h4 { color:#fff; }
+body.alto-contraste .etapa-conteudo, body.alto-contraste .feedback-autismo { background:#111; color:#fff; border:1px solid #fff; }
+@media (max-width:600px) { .central-autismo { padding:2rem .9rem; } .central-autismo__intro h2 { font-size:1.55rem; } .autismo-card p { min-height:0; } .etapas-controle { justify-content:center; } .etapas-controle span { width:100%; text-align:center; order:-1; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; } }
